@@ -17,10 +17,10 @@ class Annonces extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('path');
-            $table->int('nbpiece');
-            $table->int('price');
-            $table->int('idCustomer');
-            $table->int('idTypeOfAnnonce');
+            $table->integer('nbpiece');
+            $table->integer('price');
+            $table->integer('idCustomer');
+            $table->integer('idTypeOfAnnonce');
         });
     }
 
