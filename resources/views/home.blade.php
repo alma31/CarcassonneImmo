@@ -8,7 +8,7 @@
                 <div class="panel-heading">Panneau de configuration</div>
 
                 <div class="panel-body">
-                    
+                    <i class="fas fa-user-plus"></i>
                 </div>
             </div>
         </div>
