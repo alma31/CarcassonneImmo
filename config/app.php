@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        CarcasonneImmobilier\Providers\AppServiceProvider::class,
+        CarcasonneImmobilier\Providers\AuthServiceProvider::class,
+        // CarcasonneImmobilier\Providers\BroadcastServiceProvider::class,
+        CarcasonneImmobilier\Providers\EventServiceProvider::class,
+        CarcasonneImmobilier\Providers\RouteServiceProvider::class,
 
     ],
 
