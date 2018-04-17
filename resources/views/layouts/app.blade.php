@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Carcasonne Immobilier') }}
+                        {{ config('test', 'Carcasonne Immobilier') }}
                     </a>
                 </div>
 
@@ -43,7 +43,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
+                            {{--<li><a href="{{ route('login') }}">Login</a></li>--}}
                             {{--<li><a href="{{ route('register') }}">Register</a></li>--}}
                         @else
                             <li class="dropdown">
@@ -66,6 +66,12 @@
                                 </ul>
                             </li>
                         @endguest
+                            <div class="search-container">
+                                <form action="/action_page.php">
+                                    <input type="text" placeholder="Search.." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
                     </ul>
                 </div>
             </div>

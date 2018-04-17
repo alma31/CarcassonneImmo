@@ -22,3 +22,7 @@ Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/addCustomer', 'CustomerController@GetAddCustomer');
 
 Route::post('/addCustomer', 'CustomerController@AddCustomer');
+
+Route::get('/addBuilding', 'BuildingController@GetAddBuilding');
+
+Route::post('/addBuilding', 'BuildingController@AddBuilding');

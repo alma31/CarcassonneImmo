@@ -25,6 +25,6 @@ class CustomerController extends Controller
         $customer->prenom = $request->prenom;
         $customer->telephone = $request->telephone;
         $customer->save();
-        var_dump("Ok");
+        return redirect()->action('HomeController@index');
     }
 }

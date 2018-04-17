@@ -14,8 +14,8 @@
                                     <span>Ajouter un client</span></a>
                             </div>
                             <div class="col-sm-4">
-                                <i class="fas fa-building fa-5x"></i>
-                                <span>Ajouter un logement</span>
+                                <a href="/addBuilding"><i class="fas fa-building fa-5x"></i>
+                                    <span>Ajouter un logement</span></a>
                             </div>
                             <div class="col-sm-4">
                                 <i class="fas fa-eye fa-5x"></i>
