@@ -40,5 +40,11 @@ class BuildingController extends Controller
         return view ('getAllBuildings', ['buildings' => $buildings]);
     }
 
+    public function deleteBuilding(Request $request, $id) {
+        $user = Annonce::find($request->id);
+        $user->delete();
+        return $this->getAllBuilding();
+    }
+
 
 }
