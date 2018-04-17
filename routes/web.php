@@ -28,3 +28,7 @@ Route::post('/addBuilding', 'BuildingController@AddBuilding');
 Route::get('/seeBuilding', 'BuildingController@getAllBuilding');
 
 Route::get('/deleteAnnonce/{id}', 'BuildingController@deleteBuilding');
+
+Route::get('/editAnnonce/{id}', 'BuildingController@GetEditAnnonce');
+
+Route::post('/search', 'SearchController@getAllAnnonceFilter');

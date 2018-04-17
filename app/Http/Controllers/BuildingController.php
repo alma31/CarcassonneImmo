@@ -46,5 +46,15 @@ class BuildingController extends Controller
         return $this->getAllBuilding();
     }
 
-
+    public function GetEditAnnonce($id){
+        $annonce = DB::table('annonces')
+            ->join('customers', 'annonces.idCustomer', '=', 'customers.id')
+            ->join('type_of_annonces', 'annonces.idTypeOfAnnonce', '=', 'type_of_annonces.id')
+            ->select('annonces.*', 'customers.name', 'customers.prenom','customers.telephone', 'type_of_annonces.type')
+            ->where('annonces.id', '=', $id)
+            ->get();
+        $lstCustomer = Customer::all();
+        $lstType = Type_of_annonce::all();
+        return view ('editAnnonce', ['annonce' => $annonce], ['lstCustomer' => $lstCustomer], ['lstType' => $lstType]);
+    }
 }

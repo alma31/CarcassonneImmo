@@ -10,7 +10,7 @@
                     @guest
                     @else
                         <a href="/deleteAnnonce/{{$buildingss->id}}" methods="post"><button type="button" class="btn btn-danger">X</button></a>
-                        <button type="button" class="btn btn-warning">Editer</button>
+                        <a href="/editAnnonce/{{$buildingss->id}}" methods="post"><button type="button" class="btn btn-warning">Editer</button></a>
                         @endguest
                     <h5 class="card-title">{{$buildingss->title}}</h5>
                     <img class="card-img-top" style="height: 300px;" src="{{$buildingss->path}}" alt="Card image cap">

@@ -128,11 +128,11 @@ fieldset {
 }
 
 p {
-  color: #fff;
+  color: #black;
 }
 
 h5 {
-  color: #fff;
+  color: #black;
 }
 .search-container {
   margin-top: 8px;
@@ -140,4 +140,9 @@ h5 {
 
 .align-center {
   text-align: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
 }
