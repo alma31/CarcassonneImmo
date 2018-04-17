@@ -6,6 +6,7 @@ use CarcasonneImmobilier\Annonce;
 use CarcasonneImmobilier\Type_of_annonce;
 use CarcasonneImmobilier\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -31,8 +32,12 @@ class BuildingController extends Controller
         $building->idTypeOfAnnonce = $request->idTypeOfAnnonce;
         $building->save();
         return redirect()->action('HomeController@index');
+    }
 
+    public function getAllBuilding(){
 
+        $buildings = DB::select("call GetAllAnnonceFromDB()");
+        return view ('getAllBuildings', ['buildings' => $buildings]);
     }
 
 

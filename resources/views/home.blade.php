@@ -18,8 +18,8 @@
                                     <span>Ajouter un logement</span></a>
                             </div>
                             <div class="col-sm-4">
-                                <i class="fas fa-eye fa-5x"></i>
-                                <span>Regarder tout les logement</span>
+                                <a href="/seeBuilding"> <i class="fas fa-eye fa-5x"></i>
+                                    <span>Regarder tout les logement</span> </a>
                             </div>
                         </div>
                     </div>
