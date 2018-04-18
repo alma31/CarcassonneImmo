@@ -25,6 +25,8 @@ class SearchController extends Controller
 
 
     public function getAllAnnonceFilter(Request $request){
+        $lstCustomer = Customer::all();
+        $lstType = Type_of_annonce::all();
         $price = intval($request->price);
         $type = intval($request->idTypeOfAnnonce);
         $nbpiece = intval($request->nbpiece);
@@ -33,10 +35,10 @@ class SearchController extends Controller
             ->join('type_of_annonces', 'annonces.idTypeOfAnnonce', '=', 'type_of_annonces.id')
             ->select('annonces.*', 'customers.name', 'customers.prenom','customers.telephone', 'type_of_annonces.type')
             ->where([
-                ['annonces.price', '<=', 30000],
-                ['annonces.idTypeOfAnnonce', '=', 2 ],
-                ['annonces.nbpiece', '=', 4],
+                ['annonces.price', '<=', $price],
+                ['annonces.idTypeOfAnnonce', '=', $type ],
+                ['annonces.nbpiece', '=', $nbpiece],
             ])->get();
-        var_dump($annonce);
+        return view ('getAllBuildings', ['buildings' => $annonce, 'lstCustomer' => $lstCustomer, 'lstType' => $lstType]);
     }
 }

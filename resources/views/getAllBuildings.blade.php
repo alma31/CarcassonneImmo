@@ -16,7 +16,7 @@
         </select>
         <div class="range-slider">
             <label for="">Nombre de piece</label>
-            <input class="range-slider__range" type="range" name="surface" value="2" min="1" max="6">
+            <input class="range-slider__range" type="range" name="nbpiece" value="2" min="1" max="6">
             <span class="range-slider__value">0</span>NBpiece
         </div>
 

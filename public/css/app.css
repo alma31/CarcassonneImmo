@@ -11565,9 +11565,8 @@ h5 {
 #target {
   background: #0099cc;
   width: 300px;
-  height: 300px;
+  height: 100vh;
   position: absolute;
-  height: 160px;
   z-index: 10;
   /* margin-top: 38px; */
   right: 0;
