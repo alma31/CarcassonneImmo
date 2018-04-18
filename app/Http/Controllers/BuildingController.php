@@ -59,7 +59,7 @@ class BuildingController extends Controller
         $annonce->idCustomer = $request->idCustomer;
         $annonce->idTypeOfAnnonce = $request->idTypeOfAnnonce;
         $annonce->save();
-        //return redirect()->action('ClientController@getFiche', $id);
+        return redirect()->action('BuildingController@getFicheBuilding', $id);
     }
 
     public function GetEditAnnonce($id){

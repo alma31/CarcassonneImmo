@@ -33,9 +33,9 @@ class SearchController extends Controller
             ->join('type_of_annonces', 'annonces.idTypeOfAnnonce', '=', 'type_of_annonces.id')
             ->select('annonces.*', 'customers.name', 'customers.prenom','customers.telephone', 'type_of_annonces.type')
             ->where([
-                ['annonces.price', '<=', $price],
-                ['annonces.idTypeOfAnnonce', '=', $type ],
-                ['annonces.nbpiece', '=', $nbpiece],
+                ['annonces.price', '<=', 30000],
+                ['annonces.idTypeOfAnnonce', '=', 2 ],
+                ['annonces.nbpiece', '=', 4],
             ])->get();
         var_dump($annonce);
     }
