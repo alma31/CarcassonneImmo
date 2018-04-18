@@ -3,9 +3,8 @@
 @section('content')
 
     <div class="container">
-        <form  id="contact"  action="/addBuilding" method="POST" enctype="multipart/form-data">
+        <form  id="contact"  action="/postEditAnnonce/{{$annonce[0]->id}}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
-            {{$annonce}}
             <h3>Ajouter un logement</h3>
             <fieldset>
                 <input value="{{$annonce[0]->title}}" placeholder="Titre" name="title" type="text" tabindex="1" required autofocus>
@@ -42,6 +41,7 @@
             <fieldset>
                 <label for="">Type du logement</label>
                 <select name="idTypeOfAnnonce" id="" required>
+                    <option value="{{$annonce[0]->idTypeOfAnnonce}}">{{$annonce[0]->type}}</option>
                     @foreach ($lstType as $lstTypes)
                         <option value="{{$lstTypes->id}}">{{$lstTypes->type}}</option>
                     @endforeach

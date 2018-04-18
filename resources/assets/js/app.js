@@ -20,3 +20,51 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+$('.Show').click(function() {
+    $('#target').show(500);
+    $('.Show').hide(0);
+    $('.Hide').show(0);
+});
+$('.Hide').click(function() {
+    $('#target').hide(500);
+    $('.Show').show(0);
+    $('.Hide').hide(0);
+});
+$('.toggle').click(function() {
+    $('#target').toggle('slow');
+});
+
+
+
+var rangeSlider = function(){
+    var slider = $('.range-slider'),
+        range = $('.range-slider__range'),
+        value = $('.range-slider__value');
+
+    slider.each(function(){
+
+        value.each(function(){
+            var value = $(this).prev().attr('value');
+            $(this).html(value);
+        });
+
+        range.on('input', function(){
+            $(this).next(value).html(this.value);
+        });
+    });
+};
+
+rangeSlider();
+
+
+$(".ilike").click(function() {
+    if($('#ilike-path').hasClass('fill-red')){
+        $('#ilike-path').removeClass('fill-red');
+        $('#ilike-path').addClass('fill-white');
+    }
+    else{
+        $('#ilike-path').removeClass('fill-white');
+        $('#ilike-path').addClass('fill-red');
+    }
+});

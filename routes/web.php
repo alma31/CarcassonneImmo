@@ -29,6 +29,12 @@ Route::get('/seeBuilding', 'BuildingController@getAllBuilding');
 
 Route::get('/deleteAnnonce/{id}', 'BuildingController@deleteBuilding');
 
-Route::get('/editAnnonce/{id}', 'BuildingController@GetEditAnnonce');
+Route::get('/editAnnonce/{id}', 'BuildingController@GetEditAnnonce')->middleware('auth');
 
-Route::post('/search', 'SearchController@getAllAnnonceFilter');
+Route::post('/postEditAnnonce/{id}', 'BuildingController@PostEditAnnonce');
+
+Route::post('/search', 'SearchController@getAllAnnonceSearch');
+
+Route::post('/searchFilter', 'SearchController@getAllAnnonceFilter');
+
+Route::get('/getFiche/{id}', 'BuildingController@getFicheBuilding');
