@@ -17,21 +17,21 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 
-Route::get('/addCustomer', 'CustomerController@GetAddCustomer');
+Route::get('/addCustomer', 'CustomerController@GetAddCustomer')->middleware('auth');
 
-Route::post('/addCustomer', 'CustomerController@AddCustomer');
+Route::post('/addCustomer', 'CustomerController@AddCustomer')->middleware('auth');
 
-Route::get('/addBuilding', 'BuildingController@GetAddBuilding');
+Route::get('/addBuilding', 'BuildingController@GetAddBuilding')->middleware('auth');
 
-Route::post('/addBuilding', 'BuildingController@AddBuilding');
+Route::post('/addBuilding', 'BuildingController@AddBuilding')->middleware('auth');
 
 Route::get('/seeBuilding', 'BuildingController@getAllBuilding');
 
-Route::get('/deleteAnnonce/{id}', 'BuildingController@deleteBuilding');
+Route::get('/deleteAnnonce/{id}', 'BuildingController@deleteBuilding')->middleware('auth');
 
 Route::get('/editAnnonce/{id}', 'BuildingController@GetEditAnnonce')->middleware('auth');
 
-Route::post('/postEditAnnonce/{id}', 'BuildingController@PostEditAnnonce');
+Route::post('/postEditAnnonce/{id}', 'BuildingController@PostEditAnnonce')->middleware('auth');
 
 Route::post('/search', 'SearchController@getAllAnnonceSearch');
 
