@@ -40,7 +40,8 @@
                         <a href="/editAnnonce/{{$buildingss->id}}" methods="post"><button type="button" class="btn btn-warning">Editer</button></a>
                         @endguest
                     <h5 class="card-title">{{$buildingss->title}}</h5>
-                    <img class="card-img-top" style="height: 300px;" src="{{$buildingss->path}}" alt="Card image cap">
+                    <img class="card-img-top" style="height: 300px;
+    max-width: 300px;" src="{{$buildingss->path}}" alt="Card image cap">
                     <div class="card-body">
                         <p style="text-align: left;" class="card-text">Nb piece: {{$buildingss->nbpiece}} </p>
                         <p style="text-align: left;" class="card-text">Prix: {{$buildingss->price}} </p>
